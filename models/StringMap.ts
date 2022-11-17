@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class StringMap {
     /**
@@ -184,7 +183,7 @@ export class StringMap {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "en",
             "baseName": "en",
@@ -442,7 +441,7 @@ export class StringMap {
             "baseName": "vi",
             "type": "string",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return StringMap.attributeTypeMap;

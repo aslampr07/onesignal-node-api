@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class NotificationAllOf {
     /**
@@ -16,13 +15,13 @@ export class NotificationAllOf {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "send_after",
             "baseName": "send_after",
             "type": "string",
             "format": "date-time"
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return NotificationAllOf.attributeTypeMap;

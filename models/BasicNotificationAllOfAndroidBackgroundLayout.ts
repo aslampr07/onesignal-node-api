@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 /**
 * Channel: Push Notifications Platform: Android Allowing setting a background image for the notification. This is a JSON object containing the following keys. See our Background Image documentation for image sizes. 
@@ -27,7 +26,7 @@ export class BasicNotificationAllOfAndroidBackgroundLayout {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "image",
             "baseName": "image",
@@ -45,7 +44,7 @@ export class BasicNotificationAllOfAndroidBackgroundLayout {
             "baseName": "contents_color",
             "type": "string",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return BasicNotificationAllOfAndroidBackgroundLayout.attributeTypeMap;

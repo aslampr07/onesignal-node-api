@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class UpdatePlayerTagsRequestBody {
     /**
@@ -16,13 +15,13 @@ export class UpdatePlayerTagsRequestBody {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "tags",
             "baseName": "tags",
             "type": "object",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return UpdatePlayerTagsRequestBody.attributeTypeMap;

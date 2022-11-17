@@ -6,13 +6,10 @@
  * Contact: devrel@onesignal.com
  */
 
-import { BasicNotificationAllOf } from './BasicNotificationAllOf';
 import { BasicNotificationAllOfAndroidBackgroundLayout } from './BasicNotificationAllOfAndroidBackgroundLayout';
 import { Button } from './Button';
 import { Filter } from './Filter';
-import { NotificationTarget } from './NotificationTarget';
 import { StringMap } from './StringMap';
-import { HttpFile } from '../http/http';
 
 export class BasicNotification {
     /**
@@ -398,7 +395,7 @@ export class BasicNotification {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "included_segments",
             "baseName": "included_segments",
@@ -1004,7 +1001,7 @@ export class BasicNotification {
             "baseName": "filters",
             "type": "Array<Filter>",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return BasicNotification.attributeTypeMap;
@@ -1015,5 +1012,5 @@ export class BasicNotification {
 }
 
 
-export type BasicNotificationAggregationEnum = "sum" | "count" ;
+export type BasicNotificationAggregationEnum = "sum" | "count";
 

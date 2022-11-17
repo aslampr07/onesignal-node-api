@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class PlatformDeliveryDataEmailAllOf {
     /**
@@ -40,7 +39,7 @@ export class PlatformDeliveryDataEmailAllOf {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "opened",
             "baseName": "opened",
@@ -82,7 +81,7 @@ export class PlatformDeliveryDataEmailAllOf {
             "baseName": "unsubscribed",
             "type": "number",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return PlatformDeliveryDataEmailAllOf.attributeTypeMap;

@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class Operator {
     /**
@@ -16,13 +15,13 @@ export class Operator {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "operator",
             "baseName": "operator",
             "type": "OperatorOperatorEnum",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return Operator.attributeTypeMap;
@@ -33,5 +32,5 @@ export class Operator {
 }
 
 
-export type OperatorOperatorEnum = "OR" | "AND" ;
+export type OperatorOperatorEnum = "OR" | "AND";
 

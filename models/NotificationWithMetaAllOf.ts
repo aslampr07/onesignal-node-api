@@ -7,7 +7,6 @@
  */
 
 import { PlatformDeliveryData } from './PlatformDeliveryData';
-import { HttpFile } from '../http/http';
 
 export class NotificationWithMetaAllOf {
     /**
@@ -54,7 +53,7 @@ export class NotificationWithMetaAllOf {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "remaining",
             "baseName": "remaining",
@@ -120,7 +119,7 @@ export class NotificationWithMetaAllOf {
             "baseName": "throttle_rate_per_minute",
             "type": "number",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return NotificationWithMetaAllOf.attributeTypeMap;

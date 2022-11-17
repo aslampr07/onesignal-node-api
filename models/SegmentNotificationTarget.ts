@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class SegmentNotificationTarget {
     /**
@@ -20,7 +19,7 @@ export class SegmentNotificationTarget {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "included_segments",
             "baseName": "included_segments",
@@ -32,7 +31,7 @@ export class SegmentNotificationTarget {
             "baseName": "excluded_segments",
             "type": "Array<string>",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return SegmentNotificationTarget.attributeTypeMap;

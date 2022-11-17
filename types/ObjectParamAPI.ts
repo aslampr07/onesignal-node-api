@@ -1,60 +1,29 @@
-import { ResponseContext, RequestContext, HttpFile } from '../http/http';
-import * as models from '../models/all';
-import { Configuration} from '../configuration'
+import { Configuration } from '../configuration'
 
 import { App } from '../models/App';
-import { BasicNotification } from '../models/BasicNotification';
-import { BasicNotificationAllOf } from '../models/BasicNotificationAllOf';
-import { BasicNotificationAllOfAndroidBackgroundLayout } from '../models/BasicNotificationAllOfAndroidBackgroundLayout';
-import { Button } from '../models/Button';
 import { CancelNotificationSuccessResponse } from '../models/CancelNotificationSuccessResponse';
-import { CreateNotificationBadRequestResponse } from '../models/CreateNotificationBadRequestResponse';
 import { CreateNotificationSuccessResponse } from '../models/CreateNotificationSuccessResponse';
 import { CreatePlayerSuccessResponse } from '../models/CreatePlayerSuccessResponse';
-import { CreateSegmentBadRequestResponse } from '../models/CreateSegmentBadRequestResponse';
-import { CreateSegmentConflictResponse } from '../models/CreateSegmentConflictResponse';
 import { CreateSegmentSuccessResponse } from '../models/CreateSegmentSuccessResponse';
-import { DeletePlayerBadRequestResponse } from '../models/DeletePlayerBadRequestResponse';
-import { DeletePlayerNotFoundResponse } from '../models/DeletePlayerNotFoundResponse';
 import { DeletePlayerSuccessResponse } from '../models/DeletePlayerSuccessResponse';
-import { DeleteSegmentBadRequestResponse } from '../models/DeleteSegmentBadRequestResponse';
-import { DeleteSegmentNotFoundResponse } from '../models/DeleteSegmentNotFoundResponse';
 import { DeleteSegmentSuccessResponse } from '../models/DeleteSegmentSuccessResponse';
-import { DeliveryData } from '../models/DeliveryData';
 import { ExportPlayersRequestBody } from '../models/ExportPlayersRequestBody';
 import { ExportPlayersSuccessResponse } from '../models/ExportPlayersSuccessResponse';
-import { Filter } from '../models/Filter';
-import { FilterExpressions } from '../models/FilterExpressions';
 import { GetNotificationRequestBody } from '../models/GetNotificationRequestBody';
-import { InvalidIdentifierError } from '../models/InvalidIdentifierError';
 import { Notification } from '../models/Notification';
-import { Notification200Errors } from '../models/Notification200Errors';
-import { NotificationAllOf } from '../models/NotificationAllOf';
-import { NotificationHistoryBadRequestResponse } from '../models/NotificationHistoryBadRequestResponse';
 import { NotificationHistorySuccessResponse } from '../models/NotificationHistorySuccessResponse';
 import { NotificationSlice } from '../models/NotificationSlice';
-import { NotificationTarget } from '../models/NotificationTarget';
 import { NotificationWithMeta } from '../models/NotificationWithMeta';
-import { NotificationWithMetaAllOf } from '../models/NotificationWithMetaAllOf';
-import { Operator } from '../models/Operator';
-import { OutcomeData } from '../models/OutcomeData';
 import { OutcomesData } from '../models/OutcomesData';
-import { PlatformDeliveryData } from '../models/PlatformDeliveryData';
-import { PlatformDeliveryDataEmailAllOf } from '../models/PlatformDeliveryDataEmailAllOf';
-import { PlatformDeliveryDataSmsAllOf } from '../models/PlatformDeliveryDataSmsAllOf';
 import { Player } from '../models/Player';
-import { PlayerNotificationTarget } from '../models/PlayerNotificationTarget';
 import { PlayerSlice } from '../models/PlayerSlice';
-import { Purchase } from '../models/Purchase';
 import { Segment } from '../models/Segment';
-import { SegmentNotificationTarget } from '../models/SegmentNotificationTarget';
-import { StringMap } from '../models/StringMap';
 import { UpdatePlayerSuccessResponse } from '../models/UpdatePlayerSuccessResponse';
 import { UpdatePlayerTagsRequestBody } from '../models/UpdatePlayerTagsRequestBody';
 import { UpdatePlayerTagsSuccessResponse } from '../models/UpdatePlayerTagsSuccessResponse';
 
 import { ObservableDefaultApi } from "./ObservableAPI";
-import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
+import { DefaultApiRequestFactory, DefaultApiResponseProcessor } from "../apis/DefaultApi";
 
 export interface DefaultApiCancelNotificationRequest {
     /**
@@ -372,7 +341,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public cancelNotification(param: DefaultApiCancelNotificationRequest, options?: Configuration): Promise<CancelNotificationSuccessResponse> {
-        return this.api.cancelNotification(param.appId, param.notificationId,  options).toPromise();
+        return this.api.cancelNotification(param.appId, param.notificationId, options).toPromise();
     }
 
     /**
@@ -381,7 +350,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public createApp(param: DefaultApiCreateAppRequest, options?: Configuration): Promise<App> {
-        return this.api.createApp(param.app,  options).toPromise();
+        return this.api.createApp(param.app, options).toPromise();
     }
 
     /**
@@ -390,7 +359,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public createNotification(param: DefaultApiCreateNotificationRequest, options?: Configuration): Promise<CreateNotificationSuccessResponse> {
-        return this.api.createNotification(param.notification,  options).toPromise();
+        return this.api.createNotification(param.notification, options).toPromise();
     }
 
     /**
@@ -399,7 +368,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public createPlayer(param: DefaultApiCreatePlayerRequest, options?: Configuration): Promise<CreatePlayerSuccessResponse> {
-        return this.api.createPlayer(param.player,  options).toPromise();
+        return this.api.createPlayer(param.player, options).toPromise();
     }
 
     /**
@@ -408,7 +377,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public createSegments(param: DefaultApiCreateSegmentsRequest, options?: Configuration): Promise<CreateSegmentSuccessResponse> {
-        return this.api.createSegments(param.appId, param.segment,  options).toPromise();
+        return this.api.createSegments(param.appId, param.segment, options).toPromise();
     }
 
     /**
@@ -417,7 +386,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public deletePlayer(param: DefaultApiDeletePlayerRequest, options?: Configuration): Promise<DeletePlayerSuccessResponse> {
-        return this.api.deletePlayer(param.appId, param.playerId,  options).toPromise();
+        return this.api.deletePlayer(param.appId, param.playerId, options).toPromise();
     }
 
     /**
@@ -426,7 +395,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public deleteSegments(param: DefaultApiDeleteSegmentsRequest, options?: Configuration): Promise<DeleteSegmentSuccessResponse> {
-        return this.api.deleteSegments(param.appId, param.segmentId,  options).toPromise();
+        return this.api.deleteSegments(param.appId, param.segmentId, options).toPromise();
     }
 
     /**
@@ -435,7 +404,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public exportPlayers(param: DefaultApiExportPlayersRequest, options?: Configuration): Promise<ExportPlayersSuccessResponse> {
-        return this.api.exportPlayers(param.appId, param.exportPlayersRequestBody,  options).toPromise();
+        return this.api.exportPlayers(param.appId, param.exportPlayersRequestBody, options).toPromise();
     }
 
     /**
@@ -444,16 +413,15 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public getApp(param: DefaultApiGetAppRequest, options?: Configuration): Promise<App> {
-        return this.api.getApp(param.appId,  options).toPromise();
+        return this.api.getApp(param.appId, options).toPromise();
     }
 
     /**
      * View the details of all of your current OneSignal apps
      * View apps
-     * @param param the request object
      */
-    public getApps(param: DefaultApiGetAppsRequest = {}, options?: Configuration): Promise<Array<App>> {
-        return this.api.getApps( options).toPromise();
+    public getApps(options?: Configuration): Promise<Array<App>> {
+        return this.api.getApps(options).toPromise();
     }
 
     /**
@@ -462,7 +430,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public getNotification(param: DefaultApiGetNotificationRequest, options?: Configuration): Promise<NotificationWithMeta> {
-        return this.api.getNotification(param.appId, param.notificationId,  options).toPromise();
+        return this.api.getNotification(param.appId, param.notificationId, options).toPromise();
     }
 
     /**
@@ -471,7 +439,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public getNotificationHistory(param: DefaultApiGetNotificationHistoryRequest, options?: Configuration): Promise<NotificationHistorySuccessResponse> {
-        return this.api.getNotificationHistory(param.notificationId, param.getNotificationRequestBody,  options).toPromise();
+        return this.api.getNotificationHistory(param.notificationId, param.getNotificationRequestBody, options).toPromise();
     }
 
     /**
@@ -480,7 +448,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public getNotifications(param: DefaultApiGetNotificationsRequest, options?: Configuration): Promise<NotificationSlice> {
-        return this.api.getNotifications(param.appId, param.limit, param.offset, param.kind,  options).toPromise();
+        return this.api.getNotifications(param.appId, param.limit, param.offset, param.kind, options).toPromise();
     }
 
     /**
@@ -489,7 +457,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public getOutcomes(param: DefaultApiGetOutcomesRequest, options?: Configuration): Promise<OutcomesData> {
-        return this.api.getOutcomes(param.appId, param.outcomeNames, param.outcomeNames2, param.outcomeTimeRange, param.outcomePlatforms, param.outcomeAttribution,  options).toPromise();
+        return this.api.getOutcomes(param.appId, param.outcomeNames, param.outcomeNames2, param.outcomeTimeRange, param.outcomePlatforms, param.outcomeAttribution, options).toPromise();
     }
 
     /**
@@ -498,7 +466,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public getPlayer(param: DefaultApiGetPlayerRequest, options?: Configuration): Promise<Player> {
-        return this.api.getPlayer(param.appId, param.playerId, param.emailAuthHash,  options).toPromise();
+        return this.api.getPlayer(param.appId, param.playerId, param.emailAuthHash, options).toPromise();
     }
 
     /**
@@ -507,7 +475,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public getPlayers(param: DefaultApiGetPlayersRequest, options?: Configuration): Promise<PlayerSlice> {
-        return this.api.getPlayers(param.appId, param.limit, param.offset,  options).toPromise();
+        return this.api.getPlayers(param.appId, param.limit, param.offset, options).toPromise();
     }
 
     /**
@@ -516,7 +484,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public updateApp(param: DefaultApiUpdateAppRequest, options?: Configuration): Promise<App> {
-        return this.api.updateApp(param.appId, param.app,  options).toPromise();
+        return this.api.updateApp(param.appId, param.app, options).toPromise();
     }
 
     /**
@@ -525,7 +493,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public updatePlayer(param: DefaultApiUpdatePlayerRequest, options?: Configuration): Promise<UpdatePlayerSuccessResponse> {
-        return this.api.updatePlayer(param.playerId, param.player,  options).toPromise();
+        return this.api.updatePlayer(param.playerId, param.player, options).toPromise();
     }
 
     /**
@@ -534,7 +502,7 @@ export class ObjectDefaultApi {
      * @param param the request object
      */
     public updatePlayerTags(param: DefaultApiUpdatePlayerTagsRequest, options?: Configuration): Promise<UpdatePlayerTagsSuccessResponse> {
-        return this.api.updatePlayerTags(param.appId, param.externalUserId, param.updatePlayerTagsRequestBody,  options).toPromise();
+        return this.api.updatePlayerTags(param.appId, param.externalUserId, param.updatePlayerTagsRequestBody, options).toPromise();
     }
 
 }

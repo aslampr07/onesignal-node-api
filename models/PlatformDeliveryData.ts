@@ -9,7 +9,6 @@
 import { DeliveryData } from './DeliveryData';
 import { PlatformDeliveryDataEmailAllOf } from './PlatformDeliveryDataEmailAllOf';
 import { PlatformDeliveryDataSmsAllOf } from './PlatformDeliveryDataSmsAllOf';
-import { HttpFile } from '../http/http';
 
 /**
 * Hash of delivery statistics broken out by target device platform.
@@ -26,7 +25,7 @@ export class PlatformDeliveryData {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "edge_web_push",
             "baseName": "edge_web_push",
@@ -74,7 +73,7 @@ export class PlatformDeliveryData {
             "baseName": "email",
             "type": "DeliveryData & PlatformDeliveryDataEmailAllOf",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return PlatformDeliveryData.attributeTypeMap;

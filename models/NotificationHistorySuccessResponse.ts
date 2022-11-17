@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class NotificationHistorySuccessResponse {
     'success'?: boolean;
@@ -14,7 +13,7 @@ export class NotificationHistorySuccessResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "success",
             "baseName": "success",
@@ -26,7 +25,7 @@ export class NotificationHistorySuccessResponse {
             "baseName": "destination_url",
             "type": "string",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return NotificationHistorySuccessResponse.attributeTypeMap;

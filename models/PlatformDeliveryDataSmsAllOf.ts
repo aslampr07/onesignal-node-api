@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class PlatformDeliveryDataSmsAllOf {
     /**
@@ -24,7 +23,7 @@ export class PlatformDeliveryDataSmsAllOf {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "provider_successful",
             "baseName": "provider_successful",
@@ -42,7 +41,7 @@ export class PlatformDeliveryDataSmsAllOf {
             "baseName": "provider_errored",
             "type": "number",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return PlatformDeliveryDataSmsAllOf.attributeTypeMap;

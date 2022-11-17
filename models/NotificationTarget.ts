@@ -6,9 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { PlayerNotificationTarget } from './PlayerNotificationTarget';
-import { SegmentNotificationTarget } from './SegmentNotificationTarget';
-import { HttpFile } from '../http/http';
 
 export class NotificationTarget {
     /**
@@ -62,7 +59,7 @@ export class NotificationTarget {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "included_segments",
             "baseName": "included_segments",
@@ -134,7 +131,7 @@ export class NotificationTarget {
             "baseName": "include_android_reg_ids",
             "type": "Array<string>",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return NotificationTarget.attributeTypeMap;

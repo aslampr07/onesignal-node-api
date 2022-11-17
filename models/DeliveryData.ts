@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class DeliveryData {
     /**
@@ -32,7 +31,7 @@ export class DeliveryData {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "successful",
             "baseName": "successful",
@@ -62,7 +61,7 @@ export class DeliveryData {
             "baseName": "received",
             "type": "number",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return DeliveryData.attributeTypeMap;

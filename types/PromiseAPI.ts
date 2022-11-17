@@ -1,60 +1,29 @@
-import { ResponseContext, RequestContext, HttpFile } from '../http/http';
-import * as models from '../models/all';
-import { Configuration} from '../configuration'
+import { Configuration } from '../configuration'
 
 import { App } from '../models/App';
-import { BasicNotification } from '../models/BasicNotification';
-import { BasicNotificationAllOf } from '../models/BasicNotificationAllOf';
-import { BasicNotificationAllOfAndroidBackgroundLayout } from '../models/BasicNotificationAllOfAndroidBackgroundLayout';
-import { Button } from '../models/Button';
 import { CancelNotificationSuccessResponse } from '../models/CancelNotificationSuccessResponse';
-import { CreateNotificationBadRequestResponse } from '../models/CreateNotificationBadRequestResponse';
 import { CreateNotificationSuccessResponse } from '../models/CreateNotificationSuccessResponse';
 import { CreatePlayerSuccessResponse } from '../models/CreatePlayerSuccessResponse';
-import { CreateSegmentBadRequestResponse } from '../models/CreateSegmentBadRequestResponse';
-import { CreateSegmentConflictResponse } from '../models/CreateSegmentConflictResponse';
 import { CreateSegmentSuccessResponse } from '../models/CreateSegmentSuccessResponse';
-import { DeletePlayerBadRequestResponse } from '../models/DeletePlayerBadRequestResponse';
-import { DeletePlayerNotFoundResponse } from '../models/DeletePlayerNotFoundResponse';
 import { DeletePlayerSuccessResponse } from '../models/DeletePlayerSuccessResponse';
-import { DeleteSegmentBadRequestResponse } from '../models/DeleteSegmentBadRequestResponse';
-import { DeleteSegmentNotFoundResponse } from '../models/DeleteSegmentNotFoundResponse';
 import { DeleteSegmentSuccessResponse } from '../models/DeleteSegmentSuccessResponse';
-import { DeliveryData } from '../models/DeliveryData';
 import { ExportPlayersRequestBody } from '../models/ExportPlayersRequestBody';
 import { ExportPlayersSuccessResponse } from '../models/ExportPlayersSuccessResponse';
-import { Filter } from '../models/Filter';
-import { FilterExpressions } from '../models/FilterExpressions';
 import { GetNotificationRequestBody } from '../models/GetNotificationRequestBody';
-import { InvalidIdentifierError } from '../models/InvalidIdentifierError';
 import { Notification } from '../models/Notification';
-import { Notification200Errors } from '../models/Notification200Errors';
-import { NotificationAllOf } from '../models/NotificationAllOf';
-import { NotificationHistoryBadRequestResponse } from '../models/NotificationHistoryBadRequestResponse';
 import { NotificationHistorySuccessResponse } from '../models/NotificationHistorySuccessResponse';
 import { NotificationSlice } from '../models/NotificationSlice';
-import { NotificationTarget } from '../models/NotificationTarget';
 import { NotificationWithMeta } from '../models/NotificationWithMeta';
-import { NotificationWithMetaAllOf } from '../models/NotificationWithMetaAllOf';
-import { Operator } from '../models/Operator';
-import { OutcomeData } from '../models/OutcomeData';
 import { OutcomesData } from '../models/OutcomesData';
-import { PlatformDeliveryData } from '../models/PlatformDeliveryData';
-import { PlatformDeliveryDataEmailAllOf } from '../models/PlatformDeliveryDataEmailAllOf';
-import { PlatformDeliveryDataSmsAllOf } from '../models/PlatformDeliveryDataSmsAllOf';
 import { Player } from '../models/Player';
-import { PlayerNotificationTarget } from '../models/PlayerNotificationTarget';
 import { PlayerSlice } from '../models/PlayerSlice';
-import { Purchase } from '../models/Purchase';
 import { Segment } from '../models/Segment';
-import { SegmentNotificationTarget } from '../models/SegmentNotificationTarget';
-import { StringMap } from '../models/StringMap';
 import { UpdatePlayerSuccessResponse } from '../models/UpdatePlayerSuccessResponse';
 import { UpdatePlayerTagsRequestBody } from '../models/UpdatePlayerTagsRequestBody';
 import { UpdatePlayerTagsSuccessResponse } from '../models/UpdatePlayerTagsSuccessResponse';
 import { ObservableDefaultApi } from './ObservableAPI';
 
-import { DefaultApiRequestFactory, DefaultApiResponseProcessor} from "../apis/DefaultApi";
+import { DefaultApiRequestFactory, DefaultApiResponseProcessor } from "../apis/DefaultApi";
 export class PromiseDefaultApi {
     private api: ObservableDefaultApi
 

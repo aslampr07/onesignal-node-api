@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class FilterNotificationTarget {
     /**
@@ -60,7 +59,7 @@ export class FilterNotificationTarget {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "last_session",
             "baseName": "last_session",
@@ -132,7 +131,7 @@ export class FilterNotificationTarget {
             "baseName": "country",
             "type": "string",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return FilterNotificationTarget.attributeTypeMap;

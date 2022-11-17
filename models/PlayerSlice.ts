@@ -7,7 +7,6 @@
  */
 
 import { Player } from './Player';
-import { HttpFile } from '../http/http';
 
 export class PlayerSlice {
     'total_count'?: number;
@@ -17,7 +16,7 @@ export class PlayerSlice {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "total_count",
             "baseName": "total_count",
@@ -41,7 +40,7 @@ export class PlayerSlice {
             "baseName": "players",
             "type": "Array<Player>",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return PlayerSlice.attributeTypeMap;

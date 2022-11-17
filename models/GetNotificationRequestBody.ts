@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class GetNotificationRequestBody {
     /**
@@ -21,7 +20,7 @@ export class GetNotificationRequestBody {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "events",
             "baseName": "events",
@@ -39,7 +38,7 @@ export class GetNotificationRequestBody {
             "baseName": "app_id",
             "type": "string",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return GetNotificationRequestBody.attributeTypeMap;
@@ -50,5 +49,5 @@ export class GetNotificationRequestBody {
 }
 
 
-export type GetNotificationRequestBodyEventsEnum = "sent" | "clicked" ;
+export type GetNotificationRequestBodyEventsEnum = "sent" | "clicked";
 

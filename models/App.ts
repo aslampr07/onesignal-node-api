@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class App {
     'id'?: string;
@@ -93,7 +92,7 @@ export class App {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "id",
             "baseName": "id",
@@ -273,7 +272,7 @@ export class App {
             "baseName": "additional_data_is_root_payload",
             "type": "boolean",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return App.attributeTypeMap;
@@ -284,5 +283,5 @@ export class App {
 }
 
 
-export type AppApnsEnvEnum = "sandbox" | "production" ;
+export type AppApnsEnvEnum = "sandbox" | "production";
 

@@ -1,13 +1,11 @@
 // TODO: better import syntax?
-import {BaseAPIRequestFactory, RequiredError} from './baseapi';
-import {Configuration} from '../configuration';
-import {RequestContext, HttpMethod, ResponseContext, HttpFile} from '../http/http';
-import * as FormData from "form-data";
-import { URLSearchParams } from 'url';
-import {ObjectSerializer} from '../models/ObjectSerializer';
-import {ApiException} from './exception';
-import {canConsumeForm, isCodeInRange} from '../util';
-import {SecurityAuthentication} from '../auth/auth';
+import { BaseAPIRequestFactory, RequiredError } from './baseapi';
+import { Configuration } from '../configuration';
+import { RequestContext, HttpMethod, ResponseContext } from '../http/http';
+import { ObjectSerializer } from '../models/ObjectSerializer';
+import { ApiException } from './exception';
+import { isCodeInRange } from '../util';
+import { SecurityAuthentication } from '../auth/auth';
 
 
 import { App } from '../models/App';
@@ -86,7 +84,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -134,7 +132,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -182,7 +180,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -230,7 +228,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -281,7 +279,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -331,7 +329,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -377,7 +375,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -428,7 +426,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -466,7 +464,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -496,7 +494,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -546,7 +544,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -602,7 +600,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -665,7 +663,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -743,7 +741,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -800,7 +798,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -856,7 +854,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -912,7 +910,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -968,7 +966,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -1027,7 +1025,7 @@ export class DefaultApiRequestFactory extends BaseAPIRequestFactory {
         if (authMethod?.applySecurityAuthentication) {
             await authMethod?.applySecurityAuthentication(requestContext);
         }
-        
+
         const defaultAuth: SecurityAuthentication | undefined = _options?.authMethods?.default || this.configuration?.authMethods?.default
         if (defaultAuth?.applySecurityAuthentication) {
             await defaultAuth?.applySecurityAuthentication(requestContext);
@@ -1047,7 +1045,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to cancelNotification
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async cancelNotification(response: ResponseContext): Promise<CancelNotificationSuccessResponse > {
+    public async cancelNotification(response: ResponseContext): Promise<CancelNotificationSuccessResponse> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: CancelNotificationSuccessResponse = ObjectSerializer.deserialize(
@@ -1076,7 +1074,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to createApp
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async createApp(response: ResponseContext): Promise<App > {
+    public async createApp(response: ResponseContext): Promise<App> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: App = ObjectSerializer.deserialize(
@@ -1105,7 +1103,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to createNotification
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async createNotification(response: ResponseContext): Promise<CreateNotificationSuccessResponse > {
+    public async createNotification(response: ResponseContext): Promise<CreateNotificationSuccessResponse> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: CreateNotificationSuccessResponse = ObjectSerializer.deserialize(
@@ -1141,7 +1139,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to createPlayer
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async createPlayer(response: ResponseContext): Promise<CreatePlayerSuccessResponse > {
+    public async createPlayer(response: ResponseContext): Promise<CreatePlayerSuccessResponse> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: CreatePlayerSuccessResponse = ObjectSerializer.deserialize(
@@ -1170,7 +1168,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to createSegments
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async createSegments(response: ResponseContext): Promise<CreateSegmentSuccessResponse > {
+    public async createSegments(response: ResponseContext): Promise<CreateSegmentSuccessResponse> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("201", response.httpStatusCode)) {
             const body: CreateSegmentSuccessResponse = ObjectSerializer.deserialize(
@@ -1213,7 +1211,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to deletePlayer
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async deletePlayer(response: ResponseContext): Promise<DeletePlayerSuccessResponse > {
+    public async deletePlayer(response: ResponseContext): Promise<DeletePlayerSuccessResponse> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: DeletePlayerSuccessResponse = ObjectSerializer.deserialize(
@@ -1256,7 +1254,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to deleteSegments
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async deleteSegments(response: ResponseContext): Promise<DeleteSegmentSuccessResponse > {
+    public async deleteSegments(response: ResponseContext): Promise<DeleteSegmentSuccessResponse> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: DeleteSegmentSuccessResponse = ObjectSerializer.deserialize(
@@ -1299,7 +1297,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to exportPlayers
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async exportPlayers(response: ResponseContext): Promise<ExportPlayersSuccessResponse > {
+    public async exportPlayers(response: ResponseContext): Promise<ExportPlayersSuccessResponse> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: ExportPlayersSuccessResponse = ObjectSerializer.deserialize(
@@ -1335,7 +1333,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to getApp
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getApp(response: ResponseContext): Promise<App > {
+    public async getApp(response: ResponseContext): Promise<App> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: App = ObjectSerializer.deserialize(
@@ -1364,7 +1362,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to getApps
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getApps(response: ResponseContext): Promise<Array<App> > {
+    public async getApps(response: ResponseContext): Promise<Array<App>> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: Array<App> = ObjectSerializer.deserialize(
@@ -1393,7 +1391,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to getNotification
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getNotification(response: ResponseContext): Promise<NotificationWithMeta > {
+    public async getNotification(response: ResponseContext): Promise<NotificationWithMeta> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: NotificationWithMeta = ObjectSerializer.deserialize(
@@ -1422,7 +1420,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to getNotificationHistory
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getNotificationHistory(response: ResponseContext): Promise<NotificationHistorySuccessResponse > {
+    public async getNotificationHistory(response: ResponseContext): Promise<NotificationHistorySuccessResponse> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: NotificationHistorySuccessResponse = ObjectSerializer.deserialize(
@@ -1458,7 +1456,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to getNotifications
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getNotifications(response: ResponseContext): Promise<NotificationSlice > {
+    public async getNotifications(response: ResponseContext): Promise<NotificationSlice> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: NotificationSlice = ObjectSerializer.deserialize(
@@ -1487,7 +1485,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to getOutcomes
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getOutcomes(response: ResponseContext): Promise<OutcomesData > {
+    public async getOutcomes(response: ResponseContext): Promise<OutcomesData> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: OutcomesData = ObjectSerializer.deserialize(
@@ -1516,7 +1514,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to getPlayer
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getPlayer(response: ResponseContext): Promise<Player > {
+    public async getPlayer(response: ResponseContext): Promise<Player> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: Player = ObjectSerializer.deserialize(
@@ -1545,7 +1543,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to getPlayers
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async getPlayers(response: ResponseContext): Promise<PlayerSlice > {
+    public async getPlayers(response: ResponseContext): Promise<PlayerSlice> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: PlayerSlice = ObjectSerializer.deserialize(
@@ -1574,7 +1572,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to updateApp
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async updateApp(response: ResponseContext): Promise<App > {
+    public async updateApp(response: ResponseContext): Promise<App> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: App = ObjectSerializer.deserialize(
@@ -1603,7 +1601,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to updatePlayer
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async updatePlayer(response: ResponseContext): Promise<UpdatePlayerSuccessResponse > {
+    public async updatePlayer(response: ResponseContext): Promise<UpdatePlayerSuccessResponse> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: UpdatePlayerSuccessResponse = ObjectSerializer.deserialize(
@@ -1632,7 +1630,7 @@ export class DefaultApiResponseProcessor {
      * @params response Response returned by the server for a request to updatePlayerTags
      * @throws ApiException if the response code was not in [200, 299]
      */
-     public async updatePlayerTags(response: ResponseContext): Promise<UpdatePlayerTagsSuccessResponse > {
+    public async updatePlayerTags(response: ResponseContext): Promise<UpdatePlayerTagsSuccessResponse> {
         const contentType = ObjectSerializer.normalizeMediaType(response.headers["content-type"]);
         if (isCodeInRange("200", response.httpStatusCode)) {
             const body: UpdatePlayerTagsSuccessResponse = ObjectSerializer.deserialize(

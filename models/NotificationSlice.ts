@@ -7,7 +7,6 @@
  */
 
 import { NotificationWithMeta } from './NotificationWithMeta';
-import { HttpFile } from '../http/http';
 
 export class NotificationSlice {
     'total_count'?: number;
@@ -17,7 +16,7 @@ export class NotificationSlice {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "total_count",
             "baseName": "total_count",
@@ -41,7 +40,7 @@ export class NotificationSlice {
             "baseName": "notifications",
             "type": "Array<NotificationWithMeta>",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return NotificationSlice.attributeTypeMap;

@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class InvalidIdentifierError {
     /**
@@ -20,7 +19,7 @@ export class InvalidIdentifierError {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "invalid_external_user_ids",
             "baseName": "invalid_external_user_ids",
@@ -32,7 +31,7 @@ export class InvalidIdentifierError {
             "baseName": "invalid_player_ids",
             "type": "Array<string>",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return InvalidIdentifierError.attributeTypeMap;

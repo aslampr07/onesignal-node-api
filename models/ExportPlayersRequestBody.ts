@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class ExportPlayersRequestBody {
     /**
@@ -24,7 +23,7 @@ export class ExportPlayersRequestBody {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "extra_fields",
             "baseName": "extra_fields",
@@ -42,7 +41,7 @@ export class ExportPlayersRequestBody {
             "baseName": "segment_name",
             "type": "string",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return ExportPlayersRequestBody.attributeTypeMap;

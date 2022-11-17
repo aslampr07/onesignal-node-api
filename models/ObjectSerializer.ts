@@ -49,9 +49,9 @@ export * from './UpdatePlayerSuccessResponse';
 export * from './UpdatePlayerTagsRequestBody';
 export * from './UpdatePlayerTagsSuccessResponse';
 
-import { App            , AppApnsEnvEnum                    } from './App';
-import { BasicNotification               , BasicNotificationAggregationEnum                                                                                        } from './BasicNotification';
-import { BasicNotificationAllOf   , BasicNotificationAllOfAggregationEnum                                                                                        } from './BasicNotificationAllOf';
+import { App } from './App';
+import { BasicNotification } from './BasicNotification';
+import { BasicNotificationAllOf } from './BasicNotificationAllOf';
 import { BasicNotificationAllOfAndroidBackgroundLayout } from './BasicNotificationAllOfAndroidBackgroundLayout';
 import { Button } from './Button';
 import { CancelNotificationSuccessResponse } from './CancelNotificationSuccessResponse';
@@ -70,21 +70,21 @@ import { DeleteSegmentSuccessResponse } from './DeleteSegmentSuccessResponse';
 import { DeliveryData } from './DeliveryData';
 import { ExportPlayersRequestBody } from './ExportPlayersRequestBody';
 import { ExportPlayersSuccessResponse } from './ExportPlayersSuccessResponse';
-import { Filter   , FilterRelationEnum   } from './Filter';
-import { FilterExpressions   , FilterExpressionsRelationEnum  , FilterExpressionsOperatorEnum   } from './FilterExpressions';
-import { GetNotificationRequestBody, GetNotificationRequestBodyEventsEnum     } from './GetNotificationRequestBody';
+import { Filter } from './Filter';
+import { FilterExpressions } from './FilterExpressions';
+import { GetNotificationRequestBody } from './GetNotificationRequestBody';
 import { InvalidIdentifierError } from './InvalidIdentifierError';
-import { Notification               , NotificationAggregationEnum                                                                                         } from './Notification';
+import { Notification } from './Notification';
 import { Notification200Errors } from './Notification200Errors';
 import { NotificationAllOf } from './NotificationAllOf';
 import { NotificationHistoryBadRequestResponse } from './NotificationHistoryBadRequestResponse';
 import { NotificationHistorySuccessResponse } from './NotificationHistorySuccessResponse';
 import { NotificationSlice } from './NotificationSlice';
 import { NotificationTarget } from './NotificationTarget';
-import { NotificationWithMeta               , NotificationWithMetaAggregationEnum                                                                                                   } from './NotificationWithMeta';
+import { NotificationWithMeta } from './NotificationWithMeta';
 import { NotificationWithMetaAllOf } from './NotificationWithMetaAllOf';
-import { Operator, OperatorOperatorEnum   } from './Operator';
-import { OutcomeData  , OutcomeDataAggregationEnum   } from './OutcomeData';
+import { Operator } from './Operator';
+import { OutcomeData } from './OutcomeData';
 import { OutcomesData } from './OutcomesData';
 import { PlatformDeliveryData } from './PlatformDeliveryData';
 import { PlatformDeliveryDataEmailAllOf } from './PlatformDeliveryDataEmailAllOf';
@@ -102,20 +102,20 @@ import { UpdatePlayerTagsSuccessResponse } from './UpdatePlayerTagsSuccessRespon
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
-                    "string",
-                    "boolean",
-                    "double",
-                    "integer",
-                    "long",
-                    "float",
-                    "number",
-                    "any"
-                 ];
+    "string",
+    "boolean",
+    "double",
+    "integer",
+    "long",
+    "float",
+    "number",
+    "any"
+];
 
 const supportedMediaTypes: { [mediaType: string]: number } = {
-  "application/json": Infinity,
-  "application/octet-stream": 0,
-  "application/x-www-form-urlencoded": 0
+    "application/json": Infinity,
+    "application/octet-stream": 0,
+    "application/x-www-form-urlencoded": 0
 }
 
 
@@ -133,7 +133,7 @@ let enumsMap: Set<string> = new Set<string>([
     "OutcomeDataAggregationEnum",
 ]);
 
-let typeMap: {[index: string]: any} = {
+let typeMap: { [index: string]: any } = {
     "App": App,
     "BasicNotification": BasicNotification,
     "BasicNotificationAllOf": BasicNotificationAllOf,
@@ -210,7 +210,7 @@ export class ObjectSerializer {
             } else {
                 if (data[discriminatorProperty]) {
                     var discriminatorType = data[discriminatorProperty];
-                    if(typeMap[discriminatorType]){
+                    if (typeMap[discriminatorType]) {
                         return discriminatorType; // use the type given in the discriminator
                     } else {
                         return expectedType; // discriminator did not map to a type
@@ -238,7 +238,7 @@ export class ObjectSerializer {
             return transformedData;
         } else if (type === "Date") {
             if (format == "date") {
-                let month = data.getMonth()+1
+                let month = data.getMonth() + 1
                 month = month < 10 ? "0" + month.toString() : month.toString()
                 let day = data.getDate();
                 day = day < 10 ? "0" + day.toString() : day.toString();
@@ -260,7 +260,7 @@ export class ObjectSerializer {
 
             // get the map for the correct type.
             let attributeTypes = typeMap[type].getAttributeTypeMap();
-            let instance: {[index: string]: any} = {};
+            let instance: { [index: string]: any } = {};
             for (let index in attributeTypes) {
                 let attributeType = attributeTypes[index];
                 instance[attributeType.baseName] = ObjectSerializer.serialize(data[attributeType.name], attributeType.type, attributeType.format);

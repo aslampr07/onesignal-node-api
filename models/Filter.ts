@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class Filter {
     /**
@@ -28,7 +27,7 @@ export class Filter {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "field",
             "baseName": "field",
@@ -52,7 +51,7 @@ export class Filter {
             "baseName": "relation",
             "type": "FilterRelationEnum",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return Filter.attributeTypeMap;
@@ -63,5 +62,5 @@ export class Filter {
 }
 
 
-export type FilterRelationEnum = ">" | "<" | "=" | "!=" | "exists" | "not_exists" | "time_elapsed_gt" | "time_elapsed_lt" ;
+export type FilterRelationEnum = ">" | "<" | "=" | "!=" | "exists" | "not_exists" | "time_elapsed_gt" | "time_elapsed_lt";
 

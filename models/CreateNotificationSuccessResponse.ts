@@ -7,7 +7,6 @@
  */
 
 import { Notification200Errors } from './Notification200Errors';
-import { HttpFile } from '../http/http';
 
 export class CreateNotificationSuccessResponse {
     'id': string;
@@ -20,7 +19,7 @@ export class CreateNotificationSuccessResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "id",
             "baseName": "id",
@@ -44,7 +43,7 @@ export class CreateNotificationSuccessResponse {
             "baseName": "errors",
             "type": "Notification200Errors",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return CreateNotificationSuccessResponse.attributeTypeMap;

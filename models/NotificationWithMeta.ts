@@ -6,17 +6,12 @@
  * Contact: devrel@onesignal.com
  */
 
-import { BasicNotification } from './BasicNotification';
 import { BasicNotificationAllOfAndroidBackgroundLayout } from './BasicNotificationAllOfAndroidBackgroundLayout';
 import { Button } from './Button';
-import { DeliveryData } from './DeliveryData';
 import { Filter } from './Filter';
-import { NotificationWithMetaAllOf } from './NotificationWithMetaAllOf';
 import { OutcomeData } from './OutcomeData';
-import { OutcomesData } from './OutcomesData';
 import { PlatformDeliveryData } from './PlatformDeliveryData';
 import { StringMap } from './StringMap';
-import { HttpFile } from '../http/http';
 
 export class NotificationWithMeta {
     /**
@@ -440,7 +435,7 @@ export class NotificationWithMeta {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "included_segments",
             "baseName": "included_segments",
@@ -1112,7 +1107,7 @@ export class NotificationWithMeta {
             "baseName": "platform_delivery_stats",
             "type": "PlatformDeliveryData",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return NotificationWithMeta.attributeTypeMap;
@@ -1123,5 +1118,5 @@ export class NotificationWithMeta {
 }
 
 
-export type NotificationWithMetaAggregationEnum = "sum" | "count" ;
+export type NotificationWithMetaAggregationEnum = "sum" | "count";
 

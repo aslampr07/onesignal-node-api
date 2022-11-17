@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class OutcomeData {
     'id': string;
@@ -15,7 +14,7 @@ export class OutcomeData {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "id",
             "baseName": "id",
@@ -33,7 +32,7 @@ export class OutcomeData {
             "baseName": "aggregation",
             "type": "OutcomeDataAggregationEnum",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return OutcomeData.attributeTypeMap;
@@ -44,5 +43,5 @@ export class OutcomeData {
 }
 
 
-export type OutcomeDataAggregationEnum = "sum" | "count" ;
+export type OutcomeDataAggregationEnum = "sum" | "count";
 

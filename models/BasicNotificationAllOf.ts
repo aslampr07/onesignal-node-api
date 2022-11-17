@@ -10,7 +10,6 @@ import { BasicNotificationAllOfAndroidBackgroundLayout } from './BasicNotificati
 import { Button } from './Button';
 import { Filter } from './Filter';
 import { StringMap } from './StringMap';
-import { HttpFile } from '../http/http';
 
 export class BasicNotificationAllOf {
     'id'?: string;
@@ -348,7 +347,7 @@ export class BasicNotificationAllOf {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "id",
             "baseName": "id",
@@ -882,7 +881,7 @@ export class BasicNotificationAllOf {
             "baseName": "filters",
             "type": "Array<Filter>",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return BasicNotificationAllOf.attributeTypeMap;
@@ -893,5 +892,5 @@ export class BasicNotificationAllOf {
 }
 
 
-export type BasicNotificationAllOfAggregationEnum = "sum" | "count" ;
+export type BasicNotificationAllOfAggregationEnum = "sum" | "count";
 

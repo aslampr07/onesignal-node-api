@@ -6,7 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { HttpFile } from '../http/http';
 
 export class CreateSegmentConflictResponse {
     'success'?: boolean;
@@ -14,7 +13,7 @@ export class CreateSegmentConflictResponse {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "success",
             "baseName": "success",
@@ -26,7 +25,7 @@ export class CreateSegmentConflictResponse {
             "baseName": "errors",
             "type": "Array<string>",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return CreateSegmentConflictResponse.attributeTypeMap;

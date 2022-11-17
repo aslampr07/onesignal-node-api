@@ -7,7 +7,6 @@
  */
 
 import { FilterExpressions } from './FilterExpressions';
-import { HttpFile } from '../http/http';
 
 export class Segment {
     /**
@@ -25,7 +24,7 @@ export class Segment {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "id",
             "baseName": "id",
@@ -43,7 +42,7 @@ export class Segment {
             "baseName": "filters",
             "type": "Array<FilterExpressions>",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return Segment.attributeTypeMap;

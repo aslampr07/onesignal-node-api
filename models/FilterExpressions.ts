@@ -6,9 +6,6 @@
  * Contact: devrel@onesignal.com
  */
 
-import { Filter } from './Filter';
-import { Operator } from './Operator';
-import { HttpFile } from '../http/http';
 
 export class FilterExpressions {
     /**
@@ -34,7 +31,7 @@ export class FilterExpressions {
 
     static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
+    static readonly attributeTypeMap: Array<{ name: string, baseName: string, type: string, format: string }> = [
         {
             "name": "field",
             "baseName": "field",
@@ -64,7 +61,7 @@ export class FilterExpressions {
             "baseName": "operator",
             "type": "FilterExpressionsOperatorEnum",
             "format": ""
-        }    ];
+        }];
 
     static getAttributeTypeMap() {
         return FilterExpressions.attributeTypeMap;
@@ -75,6 +72,6 @@ export class FilterExpressions {
 }
 
 
-export type FilterExpressionsRelationEnum = ">" | "<" | "=" | "!=" | "exists" | "not_exists" | "time_elapsed_gt" | "time_elapsed_lt" ;
-export type FilterExpressionsOperatorEnum = "OR" | "AND" ;
+export type FilterExpressionsRelationEnum = ">" | "<" | "=" | "!=" | "exists" | "not_exists" | "time_elapsed_gt" | "time_elapsed_lt";
+export type FilterExpressionsOperatorEnum = "OR" | "AND";
 
